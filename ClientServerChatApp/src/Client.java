@@ -5,12 +5,13 @@ import java.net.*;
 /*
  * This class connects with the Server by creating a Socket with the IP address
  * and Port. It then reads in any message sent by the server using a connection stream (InputStreamReader)
- * and chain stream (BufferedReader)
+ * and chain stream (BufferedReader).
  */
 
 public class Client {
 	
-	public void listening() {
+	//Method to connect to server.
+	public void connect() {
 		
 		//Using try/catch to deal with any errors that may occur..
 		try {
@@ -33,5 +34,10 @@ public class Client {
 		} catch (Exception e) {e.printStackTrace();}
 		
 	}//listening() end
+	
+	public static void main(String[] args) {
+		Client client = new Client();
+		client.connect();
+	}
 
 }//Class end
